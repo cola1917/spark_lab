@@ -104,6 +104,7 @@ services:
     platform: linux/amd64
     container_name: spark-history
     hostname: spark-history
+    user: root
     networks:
       - spark-network
     depends_on:
