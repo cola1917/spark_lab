@@ -30,6 +30,10 @@ services:
     platform: linux/amd64
     container_name: spark-master
     hostname: spark-master
+    working_dir: /opt/spark/work-dir
+    user: root
+    environment:
+      - HOME=/home/spark
     networks:
       - spark-network
     ports:
