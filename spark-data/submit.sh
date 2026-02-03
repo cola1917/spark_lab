@@ -8,7 +8,7 @@ if [ -z "$APP_PATH" ]; then
   exit 1
 fi
 
-spark-submit \
+/opt/spark/bin/spark-submit \
   --master spark://spark-master:7077 \
   --deploy-mode client \
   --conf spark.eventLog.enabled=true \
