@@ -33,3 +33,4 @@ rdd_skewed = rdd.mapPartitions(slow_func)
 
 # reduceByKey 会触发 Shuffle，相同的 Key 会进入同一个 Task
 result = rdd_skewed.reduceByKey(lambda a, b: a + b).collect()
+spark.stop()

@@ -34,3 +34,4 @@ GROUP BY c.city_name
 # 核心步骤：打印全生命周期计划
 # True 会展示 Parsed, Analyzed, Optimized 和 Physical 四阶段
 spark.sql(sql_query).count()  # 先执行一次，触发计划生成
+spark.stop()

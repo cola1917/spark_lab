@@ -30,8 +30,4 @@ group_result = (
     .filter(lambda x: x[1] > 0)
     .collect()
 )
-
-# 保持 Driver 存活一段时间，方便你去 4040 页面或 History Server 查看
-time.sleep(300)
-
 spark.stop()

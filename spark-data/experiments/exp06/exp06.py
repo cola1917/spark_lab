@@ -66,3 +66,4 @@ join_bhj.explain()
 
 print("\n[SMJ Plan]:")
 join_smj.explain()
+spark.stop()

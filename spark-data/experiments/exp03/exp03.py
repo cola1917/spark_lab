@@ -30,3 +30,4 @@ df_filtered = df.filter("age > 20").groupBy("city").count()
 print("\n" + "="*20 + " DataFrame Physical Plan " + "="*20)
 df_filtered.explain() # 提交集群后查看 stdout
 df_filtered.collect()
+spark.stop()
