@@ -1,0 +1,12 @@
+Package         Version    
+--------------- -----------
+numpy           1.24.4     
+pandas          2.0.3      
+pip             20.0.2     
+pyarrow         17.0.0     
+python-dateutil 2.9.0.post0
+pytz            2025.2     
+setuptools      45.2.0     
+six             1.17.0     
+tzdata          2025.3     
+wheel           0.34.2     
