@@ -52,11 +52,11 @@
 
 ---
 
-### 🛠️ 如何开始 (Getting Started)
+## 🛠️ 如何开始 (Getting Started)
 
 本仓库提供完整的 Docker 化环境，确保所有实验结果在不同机器上具有**高度可复现性**，模拟真实生产集群的提交逻辑。
 
-#### 1. 环境拉起 (Environment Setup)
+### 1. 环境拉起 (Environment Setup)
 
 项目根目录下内置了 `docker-compose.yml`，一键启动包含 Spark Master, Worker 及 History Server 的全套实验环境。
 
@@ -69,7 +69,7 @@ docker-compose up -d
 
 > **注意**：默认使用项目定制镜像。如需自定义，请修改 `docker-compose.yml` 中的 `image` 标签。
 
-#### 2. 依赖安装 (Dependencies)
+### 2. 依赖安装 (Dependencies)
 
 在宿主机进行代码调试或开发时，建议同步实验所需的 Python 依赖库：
 
@@ -78,7 +78,7 @@ pip install -r requirements.txt
 
 ```
 
-#### 3. 运行实验 (Running Experiments)
+### 3. 运行实验 (Running Experiments)
 
 每个实验文件夹（`experiments/lab-xx`）内均包含一个便捷的 `submit.sh` 脚本。该脚本封装了标准生产环境的 `spark-submit` 逻辑，并预设了该实验的核心调优参数。
 
@@ -96,7 +96,7 @@ chmod +x submit.sh
 
 ```
 
-#### 4. 实验观测 (Observation)
+### 4. 实验观测 (Observation)
 
 实验运行期间或结束后，请通过以下入口观察 Spark 引擎的“执行细节”：
 
@@ -116,11 +116,3 @@ chmod +x submit.sh
 --conf "spark.memory.fraction=0.6" \               # 模拟内存压力
 
 ```
-
----
-
-### 🎯 下一步行动
-
-这个模块现在已经具备了很强的工程感。建议你在 GitHub 的 `experiments` 文件夹下，为每个实验准备一个简单的 `note.md`。
-
-**你想让我为你写一个 `submit.sh` 的通用标准模板吗？它可以自动检测 Docker 环境并挂载当前目录，让你的项目在任何地方都能“一键运行”。**
